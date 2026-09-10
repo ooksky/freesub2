@@ -5,6 +5,75 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇨 SC 01 - xiaohe
+  type: vless
+  server: 104.21.19.76
+  port: 2096
+  uuid: fee1da7e-a258-4456-8e5e-8ecf6518ed12
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ez-82c7e7.aBoBaBA.WorkeRS.dEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiemxGMEFDU1VDRyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
+    headers:
+      Host: ez-82c7e7.abobaba.workers.dev
+- name: 🇸🇨 SC 02 - xiaohe
+  type: vless
+  server: 45.130.125.201
+  port: 80
+  uuid: dc8a9493-c54a-459e-d060-81a700000001
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: nahan-core.netizo09.workers.dev
+- name: 🇸🇨 SC 03 - xiaohe
+  type: vless
+  server: 45.130.125.96
+  port: 443
+  uuid: 28607fa7-db30-47d6-942a-f5744e4be9ad
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: dfsuporte.garena.com.ex33r.eu.cc
+  network: ws
+  ws-opts:
+    path: /id-pusat
+    headers:
+      Host: dfsuporte.garena.com.ex33r.eu.cc
+- name: 🇸🇨 SC 04 - xiaohe
+  type: vless
+  server: 188.114.96.7
+  port: 443
+  uuid: ba49d874-fe02-465d-82d3-ed981dc7694f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: o94yv7lIF0-AnXiSd9EFeHVVS7mxn6Bh.z-ULe-IKA-d-e-Ne-k-E.WORKERs.DEv
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: o94yv7lif0-anxisd9efehvvs7mxn6bh.z-ule-ika-d-e-ne-k-e.workers.dev
+- name: 🇸🇨 SC 05 - xiaohe
+  type: vless
+  server: 141.101.114.245
+  port: 443
+  uuid: 3bb6fd82-3a15-eaea-6168-4dac2b70079e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: nahan-fog-af01.dfghttr2012.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: nahan-fog-af01.dfghttr2012.workers.dev
+- name: 🇸🇨 SC 06 - xiaohe
   type: vmess
   server: 156.226.183.181
   port: 54321
@@ -20,11 +89,21 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇨 SC 01 - xiaohe
+  - 🇸🇨 SC 02 - xiaohe
+  - 🇸🇨 SC 03 - xiaohe
+  - 🇸🇨 SC 04 - xiaohe
+  - 🇸🇨 SC 05 - xiaohe
+  - 🇸🇨 SC 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇸🇨 SC 01 - xiaohe
+  - 🇸🇨 SC 02 - xiaohe
+  - 🇸🇨 SC 03 - xiaohe
+  - 🇸🇨 SC 04 - xiaohe
+  - 🇸🇨 SC 05 - xiaohe
+  - 🇸🇨 SC 06 - xiaohe
 rules:
 - MATCH,PROXIES
